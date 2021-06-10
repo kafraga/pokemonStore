@@ -16,7 +16,7 @@ export default function Cart({ cart, themeColor }) {
               <li className="collection-item avatar">
                 <div className={styles.cartItems}>
                   <div>
-                    <img src={pokemonCart.img} alt={`imagem do pokemon ${pokemonCart.name}`} class="circle" />
+                    <img src={pokemonCart.img} alt={`imagem do pokemon ${pokemonCart.name}`} className="circle" />
                     <p>{pokemonCart.name}</p>
                     <p>{pokemonCart.price}</p>
                   </div>

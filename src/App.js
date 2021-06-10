@@ -64,7 +64,7 @@ function App() {
 
   function handleType(newType) {
     setType(newType);
-    console.log(newType)
+    window.scrollTo(0, 0);
   }
 
   return (
