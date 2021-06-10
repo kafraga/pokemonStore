@@ -10,9 +10,9 @@ export default function Cart({ cart, themeColor }) {
     <div className={`${styles.cart} z-depth-1`}>
       <h5 className={styles.cartTitle}>Carrinho</h5>
       <ul id={styles.collectionCart} className="collection">
-        {cart.map((pokemonCart) => {
+        {cart.map((pokemonCart, index) => {
           return (
-            <div>
+            <div key={index}>
               <li className="collection-item avatar">
                 <div className={styles.cartItems}>
                   <div>

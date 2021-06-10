@@ -11,9 +11,9 @@ export default function CartMobile({ cart, themeColor }) {
     <div>
       <ul id="slide-out" className="sidenav">
         <h5 className={styles.cartMobileTitle}>Carrinho</h5>
-        {cart.map((pokemonCart) => {
+        {cart.map((pokemonCart, index) => {
           return (
-            <div>
+            <div key={index}>
               <li className="divider"></li>
               <div className={styles.cartMobileItems}>
                 <img className={styles.cartMobileItemsImg} src={pokemonCart.img} alt={`imagem do pokemon ${pokemonCart.name}`} />
