@@ -1,0 +1,45 @@
+.sidenav{
+  overflow-y: hidden;
+}
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+.cartMobileTitle{
+  text-align: center;
+}
+.cartMobileItems{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin: 1rem;
+}
+
+.cartMobileItemsImg{
+  width:100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.cartMobileItemsInfo{
+ display:flex;
+ text-align: center;
+}
+
+.cartMobileItemsInfoLine{
+  line-height: 1;
+}
+
+.cartMobileItemsInfoLine p{
+  font-size: 1.3rem
+}
+
+.cartMobileSum{
+  display:flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+
+.cartMobileSum p{
+  font-size: 1.5rem;
+}
