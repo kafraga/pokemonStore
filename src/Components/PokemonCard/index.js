@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { Link } from 'react-router-dom'
 
 export default function OnePokemon({ onePokemon, addCart, themeColor }) {
   const handleClick = () => {
@@ -9,10 +10,14 @@ export default function OnePokemon({ onePokemon, addCart, themeColor }) {
     <div className="col s6 m4 l4 xl2">
       <div className="card">
         <div className="card-image">
-          <img src={onePokemon.img} alt={`${onePokemon.name}`} />
+          <Link to={`/${onePokemon.name}`}>
+            <img src={onePokemon.img} alt={`${onePokemon.name}`} />
+          </Link>
         </div>
         <div className={styles.cardContent}>
-          <span>{onePokemon.name}</span>
+          <Link to={`/${onePokemon.name}`} className={styles.cardContentLink} >
+            <span>{onePokemon.name}</span>
+          </Link>
           <div className={styles.cardContentShopping}>
             <p className={styles.cardContentPriceInfo}>{onePokemon.price}</p>
             <button className={`btn-floating ${styles.cartContentBtn} ${themeColor}`} onClick={handleClick}>

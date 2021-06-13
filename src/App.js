@@ -4,6 +4,8 @@ import Cart from './Components/Cart/Cart';
 import CartMobile from './Components/Cart/CartMobile';
 import Header from './Components/Header';
 import Pokemon from './Components/PokemonList/Pokemon';
+import PokemonInfo from './Components/PokemonInfo/PokemonInfo';
+import { Switch, Route } from 'react-router-dom';
 import M from "materialize-css";
 import 'materialize-css/dist/css/materialize.min.css'
 
@@ -88,8 +90,15 @@ function App() {
           </div>
         }
         <div className="col s12 m12 l8">
-          <Pokemon pokemon={filteredPokemon} addCart={handleCart} themeColor={color}>
-          </Pokemon>
+          <Switch>
+            <Route path='/:pokemonName'>
+              <PokemonInfo></PokemonInfo>
+            </Route>
+            <Route path='/'>
+              <Pokemon pokemon={filteredPokemon} addCart={handleCart} themeColor={color}>
+              </Pokemon>
+            </Route>
+          </Switch>
         </div>
         {width > breakpoint &&
           <div className="col s12 m12 l4">

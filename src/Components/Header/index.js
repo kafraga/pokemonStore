@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { Link } from 'react-router-dom'
 
 export default function Header({ setColor, setType, themeColor, setSearchText }) {
   const handleClick = (newColor, newType) => {
@@ -16,8 +17,9 @@ export default function Header({ setColor, setType, themeColor, setSearchText })
       <div>
         <nav>
           <div className={`nav-wrapper ${themeColor}`} id={styles.navWrapperAlign}>
-            <img className={`${styles.logo} hide-on-med-and-down`} src="./logo.png" alt="logo do pokemon" />
-
+            <Link to="/">
+              <img className={`${styles.logo} hide-on-med-and-down`} src="./logo.png" alt="logo do pokemon" />
+            </Link>
             <div className="input-field" id={styles.input}>
               <input id="search" type="search" required onKeyUp={handleKeyUp} />
               <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>

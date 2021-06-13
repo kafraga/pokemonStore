@@ -1,0 +1,11 @@
+#cardImage{
+align-items: center;
+}
+
+.cardList{
+  column-count: 3;
+}
+
+.cardListMobile{
+  column-count:2;
+}
