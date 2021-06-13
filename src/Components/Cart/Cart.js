@@ -49,9 +49,9 @@ export default function Cart({ cart, themeColor, cartFinish }) {
           <p>R$ {(sumCart().toFixed(2))}</p>
         </div>
         <div className={styles.btnCartFinish}>
-          <button className={` btn ${themeColor} modal-trigger`} data-target="modal1" onClick={handleFinishCart}>
+          <button className={` btn ${themeColor} ${cart.length === 0 && 'disabled'}`} data-target="modal1" onClick={handleFinishCart}>
             Finalizar
-        </button>
+          </button>
         </div>
       </div>
     </div>

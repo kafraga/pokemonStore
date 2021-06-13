@@ -50,9 +50,9 @@ export default function CartMobile({ cart, themeColor, cartFinish }) {
           <p>R$ {(sumCart().toFixed(2))}</p>
         </div>
         <div className={styles.btnCartMobileFinish} onClick={handleFinishCart}>
-          <button className={` btn ${themeColor}`}>
+          <button className={` btn ${themeColor} ${cart.length === 0 && 'disabled'}`}>
             Finalizar
-        </button>
+          </button>
         </div>
       </ul>
       <a className={`fixed-action-btn btn-floating btn-large sidenav-trigger ${themeColor}`} href="#!" data-target="slide-out"><i className="material-icons right">shopping_cart</i></a>
