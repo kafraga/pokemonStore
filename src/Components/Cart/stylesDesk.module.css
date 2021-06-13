@@ -35,3 +35,11 @@ overflow: auto;
 .cart__sum p{
   font-size: 2rem
 }
+
+.btnCartFinish button{
+  width: 100%;
+}
+
+h4{
+  text-align: center;
+}

@@ -43,3 +43,11 @@
 .cartMobileSum p{
   font-size: 1.5rem;
 }
+
+.btnCartMobileFinish button{
+  width: 100%;
+}
+
+h4{
+  text-align: center;
+}
